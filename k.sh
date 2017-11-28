@@ -473,9 +473,7 @@ k () {
 
       if [[ "$LS_COLORS" ]] && ls --color -d . &>/dev/null; then
         # We are using an ls that supports using colors from $LS_COLORS (probably GNU ls here)
-        pushd "${base_dir}" &>/dev/null
         NAME="$(ls --color=always -d "$NAME")"
-        popd &>/dev/null
       elif [[ $IS_DIRECTORY == 1 ]]; then
         if [[ $IS_WRITABLE_BY_OTHERS == 1 ]]; then
           if [[ $HAS_STICKY_BIT == 1 ]]; then
